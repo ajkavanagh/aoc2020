@@ -1,0 +1,7 @@
+[package]
+name = "rbacklight"
+version = "0.1.0"
+authors = ["Alex Kavanagh <alex@ajkavanagh.co.uk>"]
+edition = "2018"
+
+[dependencies]
