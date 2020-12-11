@@ -5,6 +5,7 @@ use std::io::prelude::*;
 use std::fs::OpenOptions;
 use std::fs;
 
+mod days;
 
 struct Config {
     day: u32,
@@ -51,4 +52,5 @@ fn main() {
         process::exit(1);
     });
     println!("the day is {}-{}", config.day, config.part);
+    days::day1_1::day1_1();
 }

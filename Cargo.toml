@@ -1,5 +1,5 @@
 [package]
-name = "rbacklight"
+name = "aoc2020"
 version = "0.1.0"
 authors = ["Alex Kavanagh <alex@ajkavanagh.co.uk>"]
 edition = "2018"
