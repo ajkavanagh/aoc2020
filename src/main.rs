@@ -44,6 +44,15 @@ fn usage() -> Result<(), String> {
 }
 
 
+fn run_day_part(day: u32, part: u32) {
+    match (day, part) {
+        (1,1) => days::day1_1::day1_1(),
+        (1,2) => days::day1_2::day1_2(),
+        _ => println!("Day {0}-{1} not defined", day, part),
+    }
+}
+
+
 fn main() {
     let args: Vec<String> = env::args().collect();
     let config = Config::new(&args).unwrap_or_else(|err| {
@@ -52,5 +61,5 @@ fn main() {
         process::exit(1);
     });
     println!("the day is {}-{}", config.day, config.part);
-    days::day1_1::day1_1();
+    run_day_part(config.day, config.part);
 }
