@@ -6,6 +6,7 @@ use std::fs::OpenOptions;
 use std::fs;
 
 mod days;
+mod utils;
 
 struct Config {
     day: u32,
@@ -13,7 +14,7 @@ struct Config {
 }
 
 
-const MAX_DAY: u32 = 1;  // update when we add a day
+const MAX_DAY: u32 = 25;  // update when we add a day
 
 impl Config {
 
@@ -48,6 +49,7 @@ fn run_day_part(day: u32, part: u32) {
     match (day, part) {
         (1,1) => days::day1_1::day1_1(),
         (1,2) => days::day1_2::day1_2(),
+        (2,1) => days::day2_1::day2_1(),
         _ => println!("Day {0}-{1} not defined", day, part),
     }
 }

@@ -20,6 +20,8 @@
 use std::str::FromStr;
 use std::num::ParseIntError;
 
+use crate::utils;
+
 const NUMBERS: [u32; 6] = [1721, 979, 366, 299, 675, 1456];
 
 
@@ -37,15 +39,6 @@ fn find_triple(numbers: &[u32]) -> Result<(u32, u32, u32), String> {
         }
     }
     Err("Couldn't find a triple that adds to 2020".to_string())
-}
-
-
-fn read_file<T: FromStr>(file_name: &str) -> Vec<Result<T, <T as FromStr>::Err>> {
-    std::fs::read_to_string(file_name)
-        .expect("file not found!")
-        .lines()
-        .map(|x| x.parse())
-        .collect()
 }
 
 
@@ -69,7 +62,7 @@ pub fn day1_2() {
     }
 
     println!("Now let's read the expenses file and then find in tht file:");
-    let parsed_numbers = read_file::<u32>("./input/day1-1.txt");
+    let parsed_numbers = utils::read_file::<u32>("./input/day1-1.txt");
     let numbers = extract_numbers(&parsed_numbers);
     match find_triple(&numbers) {
         Ok((v1,v2,v3)) => println!("The numbers are {0} * {1} * {2} = {3}", v1, v2, v3, v1 * v2 * v3),
