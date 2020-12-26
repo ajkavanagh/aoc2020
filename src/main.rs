@@ -31,7 +31,7 @@ impl Config {
         let day: u32 = parts[0].parse().unwrap_or(0);
         let part: u32 = parts[1].parse().unwrap_or(0);
         if day < 1 || day > MAX_DAY || part < 1 || part > 2 {
-            return Err(format!("day or part is not parsable as an int or in range: input was '{}'", command));
+            return Err(format!("day or part is not parsable as an int or not in range: input was '{}'", command));
         }
         return Ok(Config{day, part});
     }
@@ -51,7 +51,8 @@ fn run_day_part(day: u32, part: u32) {
         (1,2) => days::day1_2::day1_2(),
         (2,1) => days::day2_1::day2_1(),
         (2,2) => days::day2_2::day2_2(),
-        _ => println!("Day {0}-{1} not defined", day, part),
+        (3,1) => days::day3_1::day3_1(),
+        _ => println!("Day {0}-{1} not defined (yet?)", day, part),
     }
 }
 
