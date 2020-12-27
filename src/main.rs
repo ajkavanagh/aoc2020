@@ -54,6 +54,7 @@ fn run_day_part(day: u32, part: u32) {
         (3,1) => days::day3_1::day3_1(),
         (3,2) => days::day3_2::day3_2(),
         (4,1) => days::day4_1::day4_1(),
+        (4,2) => days::day4_2::day4_2(),
         _ => println!("Day {0}-{1} not defined (yet?)", day, part),
     }
 }

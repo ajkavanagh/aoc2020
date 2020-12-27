@@ -6,3 +6,4 @@ edition = "2018"
 
 [dependencies]
 thiserror = "1.0.22"
+hex = "0.4.2"

@@ -5,3 +5,4 @@ pub mod day2_2;
 pub mod day3_1;
 pub mod day3_2;
 pub mod day4_1;
+pub mod day4_2;
