@@ -232,7 +232,7 @@ fn restructure_input(input: &str) -> Vec<String> {
 
 
 pub fn day4_2() {
-    println!("Day 4_1.");
+    println!("Day 4_2.");
     let passport_lines = restructure_input(PASSPORTS);
     println!("{}", passport_lines.join("\n"));
     // parse the passport_lines into passports.
